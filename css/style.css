@@ -65,18 +65,22 @@ h1{
 	color: rgba(255,255,255,.9);
 }
 
-.cta a{
+.cta button{
 	margin-right: 30px;
-	border-radius: 33px;
+	border-radius: 15px;
 }
 
 
 .productos{
 	background: url(../images/fondo2.jpg)no-repeat center center fixed;
 	width: 100%;
-	height: 100vh;
+	height: 60vh;
 	text-align: center;
 	padding-top: 170px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .productos h1{
 	font-weight: 100;
@@ -88,6 +92,10 @@ h1{
 	height: 100vh;
 	text-align: center;
 	padding-top: 170px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .ventas p{
 	text-align: left;

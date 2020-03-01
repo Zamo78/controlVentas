@@ -37,8 +37,8 @@
 			<h4>Gestiona las secciones de tu local</h4><br><br>
 
 				
-			<a  href="" class="btn btn-lg btn-success add">Agregar</a>
-			<a  href="" class="btn btn-lg btn-danger remove">Remover</a>
+			<button type="button"  data-toggle="modal" data-target="#modalAddSeccion" class="btn btn-lg btn-success add">Agregar</button>
+			<button type="button"  data-toggle="modal" data-target="#modalRemoveSeccion" class="btn btn-lg btn-danger remove">Remover</button>
 	
 
 
@@ -50,9 +50,9 @@
 	<div class="container cta">
 		<h1>Productos</h1> 
 			<h4>Consulta tu stock y controla tus artículos</h4><br><br>
-				<a  href=" " class="btn btn-lg btn-success add">Agregar</a>
-				<a  href="sdas" class="btn btn-lg btn-danger remove">Remover</a>
-				<a  href="da" class="btn btn-lg btn-secondary modify">Modificar</a>
+				<button type="button" data-toggle="modal" data-target="#modalAddProducto" class="btn btn-lg btn-success add">Agregar</button>
+				<button type="button" data-toggle="modal" data-target="#modalRemoveProducto" class="btn btn-lg btn-danger remove">Remover</button>
+				<button type="button" data-toggle="modal" data-target="#modalModifyProducto" class="btn btn-lg btn-secondary modify">Modificar</button>
 	</div>
 </div>
 
@@ -65,26 +65,120 @@
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
+<!-- Modal add seccion -->
+<div class="modal fade" id="modalAddSeccion" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Agregar seccion</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+	        <div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text">Nombre de seccion</span>
+			  </div>
+	  			<input type="text" class="form-control">
+			</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
-</div>
+</div> <!-- /Modal add seccion -->
+
+
+<!-- Modal remove seccion -->
+<div class="modal fade" id="modalRemoveSeccion" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Selecciona la seccion que deseas remover</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	...
+	        <!-- menu desplegable con todas las secciones -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- /Modal remove seccion -->
+
+
+<!-- Modal add product -->
+<div class="modal fade" id="modalAddProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Agregar producto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<p> Nombre, tipo, descripcion producto</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- /Modal add product -->
+
+<!-- Modal Remove product -->
+<div class="modal fade" id="modalRemoveProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Selecciona el producto que deseas remover</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<!-- Menu desplegable con los productos existentes -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- /Modal Remove product -->
+
+<!-- Modal Modify product -->
+<div class="modal fade" id="modalModifyProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Selecciona el producto que deseas remover</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<!-- Menu desplegable con los productos existentes -->
+      	<!-- Al seleccionar un producto, debajo aparecen los datos para modificarlos -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Modificar</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- /Modal Remove product -->
+
 
 
 <!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
