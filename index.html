@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="images/faviconVentas.ico">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 </head>
 
@@ -19,9 +20,9 @@
 			<div class="col-md-3"></div>
 			<div class="col-md-5">
 				<ul class='botonera'>
-					<li><a href="#nosotros" data-ancla="nosotros">Inicio</a></li>
-					<li><a href="#servicios" data-ancla="servicios">Productos</a></li>
-					<li><a href="#contacto" data-ancla="contacto"></a></li>
+					<li><a href="#home" data-ancla="incio">Inicio</a></li>
+					<li><a href="#productos" data-ancla="productos">Productos</a></li>
+					<li><a href="#ventas" data-ancla="ventas">Ventas</a></li>
 
 				</ul>
 
@@ -33,19 +34,79 @@
 <div class="principal vertical-centered-text" id="home">
 	<div class="col-md-8 cta">
 			<h1>Secciones</h1> 
-			<h4>Gestioná las secciones de tu local</h4><br><br>
+			<h4>Gestiona las secciones de tu local</h4><br><br>
 
 				
-			<a  href="#" class="btn btn-success add">Agregar</a>
-			<a  href="#" class="btn btn-danger remove">Remover</a>
-			<a  href="#" class="btn btn-secondary modify">Modificar</a>
+			<a  href="" class="btn btn-lg btn-success add">Agregar</a>
+			<a  href="" class="btn btn-lg btn-danger remove">Remover</a>
+	
 
 
 	</div>
 </div>
 
 
+<div class="productos orange" id="productos">
+	<div class="container cta">
+		<h1>Productos</h1> 
+			<h4>Consulta tu stock y controla tus artículos</h4><br><br>
+				<a  href=" " class="btn btn-lg btn-success add">Agregar</a>
+				<a  href="sdas" class="btn btn-lg btn-danger remove">Remover</a>
+				<a  href="da" class="btn btn-lg btn-secondary modify">Modificar</a>
+	</div>
+</div>
 
+<div class="ventas orange" id="ventas">
+	<div class="container col-md-8">
+		<h1>Ventas</h1> 
+			<h4>Visualiza y mantenete al tanto de las ventas concretadas</h4><br><br>
+		<p>Listado de Ventas</p>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+<script>
+	// A $( document ).ready() block.
+$(document).ready(function() {    
+	$('.top a').click(function(e){
+	        e.preventDefault();
+	        var offset = $($(this).attr('href')).offset().top;
+	        $('html, body').animate({scrollTop:offset}, 700);
+	        return false;
+	    });
+
+});
+	
+</script>
 
 </body>
 </html>	
