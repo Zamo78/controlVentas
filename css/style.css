@@ -100,8 +100,12 @@ h1{
 	font-size: 40px;
 }
 
-#formAñadirProd, #selectBorrarProducto{
-	display: none;
+.on{
+	display: block !important;
+}
+
+.off{
+	display: none !important;
 }
 
 

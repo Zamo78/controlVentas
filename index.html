@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row top">
 			<!-- en esta linea cambiamos nuestro logo. -->
-			<div class="col-md-4"><a href="#home" data-ancla="home" class="off">
+			<div class="col-md-4"><a href="#home" data-ancla="home">
 				<img src="images/ventaslogogrande.png" alt="" class="logo"></a></div>
 			<div class="col-md-3"></div>
 			<div class="col-md-5">
@@ -110,12 +110,12 @@
 			  <div class="input-group-prepend">
 			    <span class="input-group-text">Nombre de seccion</span>
 			  </div>
-	  			<input type="text" class="form-control">
+	  			<input type="text" class="form-control" id="addSeccion" REQUIRED>
 			</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="" onclick="insertSeccion()">Guardar</button>
       </div>
     </div>
   </div>
@@ -328,5 +328,8 @@ $(document).ready(function() {
 	
 </script>
 <script type="text/javascript" src="js/modals.js"></script>
+<script type="text/javascript" src="js/db.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+<script src="/__/firebase/6.2.0/firebase-database.js"></script>
 </body>
 </html>	

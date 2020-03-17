@@ -1,6 +1,7 @@
-function cambiarSeccion(){
+/*function cambiarSeccion(){
   var selectValue = document.getElementById("selectVerSeccion");
   var seccion = selectValue.value;
+
 
   if (seccion != 'selectedOption'){
   	document.getElementById("formAñadirProd").style.display="block";
@@ -44,4 +45,19 @@ function btnOn(){
   			btnAction.disabled = true;
   		}	
  }
+*/
 
+function verificarInput(){
+	var currentElement = document.getElementsByClassName("input_text");
+
+	for (var i = 0; i < currentElement.length; i++){
+
+		var elemento = currentElement[i];
+		var existeClase = elemento.classList.contains("addSeccion");		
+		
+		if (existeClase){
+			
+		}
+	}
+	
+}
